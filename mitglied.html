@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitglied werden - Tennisgruppe Fischbeck</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #0056a6;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+        }
+        .hero {
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: #e6f0fa;
+            color: #0056a6;
+        }
+        .hero h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+        .content {
+            padding: 2rem;
+        }
+        .content h2 {
+            text-align: center;
+            color: #0056a6;
+        }
+        .content .options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .content .options a {
+            text-decoration: none;
+            color: white;
+            background-color: #0056a6;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .content form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 1rem;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .content form div {
+            margin-bottom: 1rem;
+        }
+        .content form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        .content form input,
+        .content form select {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .content form button {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #0056a6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #0056a6;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Tennisgruppe Fischbeck</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="./ueber_uns.html">Über uns</a></li>
+                <li><a href="#">Spenden</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Mitglied werden</h1>
+        <p>Werde Teil der Tennisgruppe Fischbeck und unterstütze uns aktiv!</p>
+    </section>
+
+    <main class="content">
+        <h2>Wähle deine Option</h2>
+        <div class="options">
+            <a href="#">Mit Facebook anmelden</a>
+            <a href="#">Mit Google anmelden</a>
+        </div>
+
+        <h2>Oder melde dich direkt an</h2>
+        <form action="#" method="POST">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="vorname">Vorname</label>
+                <input type="text" id="vorname" name="vorname" required>
+            </div>
+            <div>
+                <label for="email">E-Mail-Adresse</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="telefon">Telefonnummer</label>
+                <input type="tel" id="telefon" name="telefon" required>
+            </div>
+            <div>
+                <label for="geburtsdatum">Geburtsdatum</label>
+                <input type="date" id="geburtsdatum" name="geburtsdatum" required>
+            </div>
+            <div>
+                <label for="sparten">Sparten</label>
+                <select id="sparten" name="sparten" required>
+                    <option value="">Bitte wählen</option>
+                    <option value="tennis">Tennis</option>
+                    <option value="darts">Darts</option>
+                    <option value="boule">Boule</option>
+                    <option value="leichtathletik">Leichtathletik</option>
+                </select>
+            </div>
+            <div>
+                <label for="zahlungsart">Zahlungsart</label>
+                <select id="zahlungsart" name="zahlungsart" required>
+                    <option value="rechnung">Rechnung</option>
+                    <option value="lastschrift">Lastschrift</option>
+                </select>
+            </div>
+            <button type="submit">Anmelden</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tennisgruppe Fischbeck - Alle Rechte vorbehalten.</p>
+    </footer>
+</body>
+</html>
