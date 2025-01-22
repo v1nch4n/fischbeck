@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unterstütze unseren Tennisverein - Fischbeck</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #0056a6;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: #0056a6;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            text-align: center;
+        }
+        nav ul li {
+            margin: 0;
+            padding: 1rem 0;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+        }
+        .burger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 24px;
+            height: 18px;
+            cursor: pointer;
+        }
+        .burger div {
+            width: 100%;
+            height: 3px;
+            background-color: white;
+        }
+        @media (max-width: 768px) {
+            .burger {
+                display: flex;
+            }
+            nav {
+                display: flex;
+            }
+            nav ul {
+                display: none;
+            }
+            nav.active ul {
+                display: block;
+            }
+        }
+        .hero {
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: #e6f0fa;
+            color: #0056a6;
+        }
+        .hero h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+        .content {
+            padding: 2rem;
+        }
+        .content h2 {
+            text-align: center;
+            color: #0056a6;
+        }
+        .content .options {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        .content .options a {
+            text-decoration: none;
+            color: white;
+            background-color: #0056a6;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .content .section {
+            margin-top: 2rem;
+        }
+        .content form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 1rem;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .content form div {
+            margin-bottom: 1rem;
+        }
+        .content form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        .content form input,
+        .content form select {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .content form button {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #0056a6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .payment-methods {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1rem;
+        }
+        .payment-methods img {
+            width: 80px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #0056a6;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('nav');
+
+            burger.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+        });
+
+        function toggleCustomAmount(value) {
+            const customAmountField = document.getElementById('custom-betrag');
+            if (value === 'custom') {
+                customAmountField.style.display = 'block';
+                customAmountField.setAttribute('required', 'true');
+            } else {
+                customAmountField.style.display = 'none';
+                customAmountField.removeAttribute('required');
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">Tennisverein Fischbeck</div>
+        <div class="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Über uns</a></li>
+                <li><a href="#">Spenden</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Unterstütze unseren lokalen Tennisverein</h1>
+        <p>Sport verbindet Menschen – hilf uns, den Tennisverein Fischbeck zu fördern!</p>
+    </section>
+
+    <main class="content">
+        <h2>Werde Teil von uns!</h2>
+        <div class="options">
+            <div class="section">
+                <h3>Spendenformular</h3>
+                <form action="#" method="POST">
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="email">E-Mail-Adresse</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="betrag">Spendenbetrag</label>
+                        <select id="betrag" name="betrag" required onchange="toggleCustomAmount(this.value)">
+                            <option value="20">20 €</option>
+                            <option value="50">50 €</option>
+                            <option value="100">100 €</option>
+                            <option value="custom">Anderer Betrag</option>
+                        </select>
+                        <input type="number" id="custom-betrag" name="custom-betrag" min="1" placeholder="Eigenen Betrag eingeben" style="display:none; margin-top:10px;">
+                    </div>
+                    <div>
+                        <label>Zahlungsoption</label>
+                        <div class="payment-methods">
+                            <img src="paypal-logo.png" alt="PayPal" title="Mit PayPal zahlen">
+                            <img src="credit-card-logo.png" alt="Kreditkarte" title="Mit Kreditkarte zahlen">
+                        </div>
+                    </div>
+                    <button type="submit">Spenden</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tennisverein Fischbeck - Alle Rechte vorbehalten.</p>
+    </footer>
+</body>
+</html>
